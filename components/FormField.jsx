@@ -2,6 +2,7 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { TextInput } from "react-native";
 import { icons } from "../constants/constants";
+
 const FormField = ({
   title,
   value,
@@ -18,6 +19,7 @@ const FormField = ({
         <TextInput
           // style={{ outline: "none" }}
           value={value}
+          selectionColor={"black"}
           className="flex-1 text-white text-base"
           onChangeText={handleChangeText}
           placeholder={placeholder}

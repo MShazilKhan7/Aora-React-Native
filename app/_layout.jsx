@@ -42,6 +42,7 @@ export default function RootLayout() {
     // Stack can have multiple screens
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       {/* to crete a profile route */}
     </Stack>
   );

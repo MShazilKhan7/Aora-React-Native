@@ -3,16 +3,19 @@ import React, { useState } from "react";
 import { SafeAreaView, ScrollView } from "react-native";
 import { images } from "../../constants/constants";
 import FormField from "../../components/FormField";
+import CustomButton from "../../components/CustomButton";
+
 import { Link } from "expo-router";
 const SignIn = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
-        <View className="bg-[red] min-h-[85vh] w-full px-4">
+        <View className="min-h-[88vh] justify-center w-full px-4">
           <Image
             source={images.logo}
             className="w-[135px] h-[84px]"
@@ -27,7 +30,7 @@ const SignIn = () => {
             handleChangeText={(e) => {
               setForm({ ...form, email: e });
             }}
-            otherStyles="mt-7"
+            otherStyles="mt-4"
             keyboardType="email-address"
           />
           <FormField
@@ -36,8 +39,14 @@ const SignIn = () => {
             handleChangeText={(e) => {
               setForm({ ...form, password: e });
             }}
-            otherStyles="mt-7"
+            otherStyles="mt-4"
             keyboardType="password"
+          />
+          <CustomButton
+            title="Sign In"
+            // handlePress={submit}
+            containerStyles="mt-7"
+            isLoading={isSubmitting}
           />
           <View className="mt-10 justify-center items-center">
             <Text className="text-lg font-psemibold text-gray-100">
