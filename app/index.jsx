@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import { Link, router } from "expo-router";
 import { NativeWindStyleSheet } from "nativewind";
-import { SafeAreaView,ScrollView } from "react-native-web";
+import { SafeAreaView,ScrollView } from "react-native";
 import { images } from "../constants/constants";
 import CustomButton from "../components/CustomButton";
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <SafeAreaView className="bg-primary h-full">
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         {/* containing the scrollable content */}
-        <View className="w-full min-h-[87vh] justify-center items-center px-4">
+        <View className="w-full min-h-[90vh] justify-center items-center px-4">
           <Image
             source={images.logo}
             className="w-[135px] h-[84px]"
@@ -21,7 +21,7 @@ export default function App() {
             className="max-w-[380px] w-full h-[298px]"
             resizeMode="contain"
           />
-          <View>
+          <View className="w-full">
             <Text className="text-3xl font-bold text-center text-white">
               Discover Endless Possibilities with{" "}
               <Text className="text-secondary">Aora</Text>

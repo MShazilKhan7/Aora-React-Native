@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { TouchableOpacity } from "react-native-web";
+import { TouchableOpacity } from "react-native";
 //  Touchable opacity in RN
 // wrapper to views to respond to touchable events.
 // pressing -> opacity -> (decrease)
@@ -21,9 +21,7 @@ const CustomButton = ({
       }`}
       disabled={isLoading}
     >
-      <Text
-        className={`text-center text-primary font-psemibold text-lg ${textStyles}`}
-      >
+      <Text className={`text-primary font-psemibold text-lg ${textStyles}`}>
         {title}
       </Text>
     </TouchableOpacity>

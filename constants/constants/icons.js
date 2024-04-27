@@ -15,13 +15,11 @@ import home from "../../assets/icons/home.png";
 import bookmark from "../../assets/icons/bookmark.png";
 import plus from "../../assets/icons/bookmark.png";
 import profile from "../../assets/icons/profile.png";
+import eye from "../../assets/icons/eye.png";
+import hideeye from "../../assets/icons/eye-hide.png";
+
 export default {
   //   play,
-  //   bookmark,
-  home,
-  bookmark,
-  plus,
-  profile,
   //   profile,
   //   leftArrow,
   //   menu,
@@ -29,6 +27,11 @@ export default {
   //   upload,
   //   rightArrow,
   //   logout,
-  //   eyeHide,
-  //   eye,
+  //   bookmark,
+  home,
+  bookmark,
+  plus,
+  profile,
+  eye,
+  hideeye,
 };
