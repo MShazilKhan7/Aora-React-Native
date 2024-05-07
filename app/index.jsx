@@ -1,10 +1,17 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Link, router } from "expo-router";
+import { Link, Redirect, router } from "expo-router";
 import { NativeWindStyleSheet } from "nativewind";
-import { SafeAreaView,ScrollView } from "react-native";
+import { SafeAreaView, ScrollView } from "react-native";
 import { images } from "../constants/constants";
 import CustomButton from "../components/CustomButton";
+import { useGlobalContext } from "../context/GlobalProvider";
+
 export default function App() {
+  const { isLoading, isLoggedIn } = useGlobalContext();
+
+  if (!isLoading && isLoggedIn) {
+    return <Redirect href="/home" />;
+  }
   return (
     // for safe content rendering (based on devices.)
     <SafeAreaView className="bg-primary h-full">

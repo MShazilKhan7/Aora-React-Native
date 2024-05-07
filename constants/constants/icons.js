@@ -17,21 +17,25 @@ import plus from "../../assets/icons/bookmark.png";
 import profile from "../../assets/icons/profile.png";
 import eye from "../../assets/icons/eye.png";
 import hideeye from "../../assets/icons/eye-hide.png";
+import search from "../../assets/icons/search.png";
+import play from "../../assets/icons/play.png";
+import menu from "../../assets/icons/menu.png";
 
 export default {
-  //   play,
   //   profile,
   //   leftArrow,
-  //   menu,
   //   search,
   //   upload,
   //   rightArrow,
   //   logout,
   //   bookmark,
+  play,
+  menu,
   home,
   bookmark,
   plus,
   profile,
   eye,
   hideeye,
+  search,
 };

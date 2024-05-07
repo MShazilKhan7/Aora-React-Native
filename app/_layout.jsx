@@ -2,10 +2,10 @@ import { View, Text } from "react-native";
 import React, { useEffect } from "react";
 import { Slot, Stack, SplashScreen } from "expo-router";
 import { useFonts } from "expo-font";
+import { GlobalProvider } from "../context/GlobalProvider";
 
 // prevnt the splash screen from hiding on its own until we explicitly called the hideAsync() on it.
-SplashScreen.preventAutoHideAsync()
-
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   // laoding the fonts required....
@@ -40,10 +40,15 @@ export default function RootLayout() {
 
   return (
     // Stack can have multiple screens
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-      {/* to crete a profile route */}
-    </Stack>
+    <GlobalProvider>
+      <>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          {/* to crete a profile route */}
+        </Stack>
+      </>
+    </GlobalProvider>
   );
 }

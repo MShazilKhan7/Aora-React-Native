@@ -17,7 +17,7 @@ const FormField = ({
       <Text className="font-pmedium text-gray-100">{title}</Text>
       <View className="h-16 w-full bg-black-200 rounded-lg flex flex-row items-center px-2 focus:border-2 focus:border-secondary-100">
         <TextInput
-          // style={{ outline: "none" }}
+          style={{ outline: "none" }}
           value={value}
           selectionColor={"black"}
           className="flex-1 text-white text-base"
