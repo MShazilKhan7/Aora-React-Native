@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import React from "react";
 
 const Create = () => {
   return (
-    <View>
-      <Text>Create</Text>
-    </View>
-  )
-}
+    <SafeAreaView className="px-4 my-6 bg-primary h-full">
+      <Text className="text-2xl text-white font-psemibold">Create</Text>
+    </SafeAreaView>
+  );
+};
 
-export default Create
+export default Create;

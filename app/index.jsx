@@ -7,9 +7,9 @@ import CustomButton from "../components/CustomButton";
 import { useGlobalContext } from "../context/GlobalProvider";
 
 export default function App() {
-  const { isLoading, isLoggedIn } = useGlobalContext();
+  const { isLoading, isLogged } = useGlobalContext();
 
-  if (!isLoading && isLoggedIn) {
+  if (!isLoading && isLogged) {
     return <Redirect href="/home" />;
   }
   return (
@@ -50,19 +50,6 @@ export default function App() {
         </View>
       </ScrollView>
     </SafeAreaView>
-    // // className="bg-black h-full w-full"
-    // <View className="bg-white" style={styles.container}>
-    //   <Text
-    //     // style={{ fontSize: "50px", fontWeight: "900", fontFamily: "pblack" }}
-    //     className="font-pblack text-5xl"
-    //   >
-    //     Aora
-    //   </Text>
-    //   <Link href="/profile" className="text-md">
-    //     Go to Profile.
-    //   </Link>
-    //   <Link href="/home">Go to Home.</Link>
-    // </View>
   );
 }
 
